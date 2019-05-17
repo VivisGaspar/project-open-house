@@ -18,5 +18,8 @@
   "homepage": "https://github.com/VivisGaspar/project-open-house#readme",
   "devDependencies": {
     "eslint": "^5.16.0"
+  },
+  "dependencies": {
+    "firebase-tools": "^6.9.2"
   }
 }

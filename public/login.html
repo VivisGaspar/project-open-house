@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+    <script src="js/firebase-config.js"></script>
+</head>
+
+<body>
+    <section class="section-sign-up">
+        <nav class="nav-bar">
+            <img class="logo" src="images/logo.png" alt="Logo Conectadas"/>
+        </nav>
+        <form id="#sign-up" class="form-sign-up">
+            <fieldset>
+                <legend class="legend-text">Prencha com seus dados</legend>
+                <label>Nome</label>
+                <input type="text" class="sign-up-name input" />
+                <label>CPF</label>
+                <input type="text" class="sign-up-cpf input" />
+                <label>E-mail</label>
+                <input type="text" class="sign-up-email input" />
+                <label>Senha</label>
+                <input type="password" class="sign-up-password input" />
+            </fieldset>
+            <button type="button" class="sign-up-button button">Cadastrar</button>
+            <p class="info">*todos os campos são obrigatórios</p>
+            </div>
+        </form>
+    </section>
+    <section id="sign-in" class="section-sign-in">
+        <div class="bg-sign-in">
+            <form class="form-sign-in">
+                <fieldset>
+                    <legend class="legend-text">Faça seu login</legend>
+                    <input type="text" class="sign-in-email input" placeholder="E-mail" />
+                    <input type="password" class="sign-in-password input" placeholder="Senha" />
+                </fieldset>
+                <div class="content-link">
+                    <a href="#sign-up" class="link-text">Faça seu cadastro</a>
+                    <a href="#" class="link-text right">Esqueci Senha</a>
+                </div>
+                <button type="button" class="sign-in-button button">Entrar</button>
+            </form>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>
