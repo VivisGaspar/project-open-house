@@ -7,6 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
@@ -14,33 +19,38 @@
 </head>
 
 <body>
-  <section class="section-logo">
-    <nav class="nav-bar">
-      <img class="logo" src="images/logo.png" alt="Logo Conectadas" />
-    </nav>
+  <section>
+    <form id="#sign-up" class="form-sign-up">
+      <fieldset>
+        <legend class="legend-text">Prencha com seus dados</legend>
+        <input type="text" class="sign-up-name" placeholder="Nome completo" />
+        <input type="date" class="sign-up-birthday" />
+        <div class="form-group">
+          <select class="sign-up-gender">
+            <option selected>Masculino</option>
+            <option>Feminino</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select class="sign-up-state">
+            <option selected>selecione</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select class="sign-up-city">
+            <option selected></option>
+          </select>
+        </div>
+        <input type="text" class="sign-up-email" placeholder="E-mail" />
+        <input type="password" class="sign-up-password" placeholder="Senha" />
+      </fieldset>
+      <button type="button" class="sign-up-button">Cadastrar</button>
+      <p class="info">*todos os campos são obrigatórios</p>
+      </div>
+    </form>
   </section>
-  <form id="#sign-up" class="form-sign-up">
-    <fieldset>
-      <legend class="legend-text">Prencha com seus dados</legend>
-      <label>Nome</label>
-      <input type="text" class="sign-up-name" />
-      <label>Data de Nascimento</label>
-      <input type="text" class="sign-up-birthday" />
-      <label>Gênero</label>
-      <input type="text" class="sign-up-gender" />
-      <label>Estado</label>
-      <input type="text" class="sign-up-state" />
-      <label>Cidade</label>
-      <input type="text" class="sign-up-city" />
-      <label>E-mail</label>
-      <input type="text" class="sign-up-email" />
-      <label>Senha</label>
-      <input type="password" class="sign-up-password" />
-    </fieldset>
-    <button type="button" class="sign-up-button">Cadastrar</button>
-    <p class="info">*todos os campos são obrigatórios</p>
-    </div>
-  </form>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
