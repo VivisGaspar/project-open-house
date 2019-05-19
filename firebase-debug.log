@@ -1,0 +1,55 @@
+[debug] [2019-05-19T18:00:47.255Z] ----------------------------------------------------------------------
+[debug] [2019-05-19T18:00:47.309Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Carla\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-05-19T18:00:47.310Z] CLI Version:   6.10.0
+[debug] [2019-05-19T18:00:47.310Z] Platform:      win32
+[debug] [2019-05-19T18:00:47.310Z] Node Version:  v10.15.3
+[debug] [2019-05-19T18:00:47.443Z] Time:          Sun May 19 2019 15:00:47 GMT-0300 (GMT-03:00)
+[debug] [2019-05-19T18:00:47.443Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-19T18:00:47.639Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-19T18:00:47.642Z] > authorizing via signed-in user
+[debug] [2019-05-19T18:00:47.642Z] [iam] checking project mova-se-db for permissions ["firebase.projects.get"]
+[debug] [2019-05-19T18:00:47.650Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-05-19T18:00:47.651Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-05-19T18:00:48.099Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-19T18:00:48.197Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mova-se-db:testIamPermissions  
+
+[debug] [2019-05-19T18:00:49.220Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-19T18:00:49.224Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mova-se-db  
+ 
+[debug] [2019-05-19T18:00:50.136Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Carla\Documents\Laboratória\project-open-house'...
+[info] 
+[debug] [2019-05-19T18:00:50.225Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/89114266783/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-19T18:00:50.731Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-05-19T18:02:42.730Z] ----------------------------------------------------------------------
+[debug] [2019-05-19T18:02:42.738Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Carla\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-05-19T18:02:42.739Z] CLI Version:   6.10.0
+[debug] [2019-05-19T18:02:42.739Z] Platform:      win32
+[debug] [2019-05-19T18:02:42.739Z] Node Version:  v10.15.3
+[debug] [2019-05-19T18:02:42.744Z] Time:          Sun May 19 2019 15:02:42 GMT-0300 (GMT-03:00)
+[debug] [2019-05-19T18:02:42.744Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-19T18:02:42.784Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-19T18:02:42.787Z] > authorizing via signed-in user
+[debug] [2019-05-19T18:02:42.788Z] [iam] checking project mova-se-db for permissions ["firebase.projects.get"]
+[debug] [2019-05-19T18:02:42.796Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mova-se-db:testIamPermissions  
+
+[debug] [2019-05-19T18:02:43.920Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-19T18:02:43.931Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mova-se-db  
+ 
+[debug] [2019-05-19T18:02:44.859Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Carla\Documents\Laboratória\project-open-house'...
+[info] 
+[debug] [2019-05-19T18:02:44.883Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/89114266783/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-19T18:02:45.349Z] <<< HTTP RESPONSE 200
+[warn] !  hosting: Port 5000 is not available. Trying another port...
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5005
