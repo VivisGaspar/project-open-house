@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #464646;
+  color: #707070;
+}
+
+h1{
+font-size: 16px;
+}
+
+hr {
+  border-color: #C64706;
+}
+
+span {
+  font-size: 12px;
+}
+
+.rounded-border{
+  background-color: #C1C1C1;
+  border: 1px solid #C1C1C1;
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin: 20px;
+}

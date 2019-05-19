@@ -61,7 +61,7 @@ function createUserInDB(id, name, birthday, gender, state, city, email) {
     state: state,
     city: city,
     email: email,
-    picture: 'images/avatar.png'
+    picture: '../images/avatar.png'
   });
 }
 
