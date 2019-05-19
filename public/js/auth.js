@@ -53,17 +53,17 @@
 //     .catch(function(error) { handleError(error); });
 // }
 
-// function createUserInDB(id, name, birthday, gender, state, city, email) {
-//   database.ref('users/' + id).set({
-//     name: name,
-//     birthday: birthday,
-//     gender: gender,
-//     state: state,
-//     city: city,
-//     email: email,
-//     picture: 'images/avatar.png'
-//   });
-// }
+function createUserInDB(id, name, birthday, gender, state, city, email) {
+  database.ref('users/' + id).set({
+    name: name,
+    birthday: birthday,
+    gender: gender,
+    state: state,
+    city: city,
+    email: email,
+    picture: '../images/avatar.png'
+  });
+}
 
 // function signInRedirect(userId) {
 //   window.location = '../index.html';

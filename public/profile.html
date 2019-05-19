@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Perfil</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/profile.css">
+  <script src="/__/firebase/5.9.1/firebase-app.js"></script>
+  <script src="/__/firebase/5.8.4/firebase-auth.js"></script>
+  <script src="/__/firebase/5.9.1/firebase-database.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+    </nav>
+  </header>
+  <main>
+    <hr>
+    <h1>PERFIL</h1>
+    <hr>
+
+    <img class="picture">
+
+    <section>
+      <div class="rounded-border"><span class="name"></span><i class="fas fa-pen"></i></div>
+      <div class="rounded-border"><span class="email"></span><i class="fas fa-pen"></i></div>
+      <input id="date" type="date" class="rounded-border bday" />
+      <select class="rounded-border">
+        <option class="gender"></option>
+        <option value="feminino">Feminino</option>
+        <option value="masculino">Masculino</option>
+        <option value="outro">Outro</option>
+      </select>
+      <select class="rounded-border">
+        <option class="state"></option>
+      </select>
+      <select class="rounded-border">
+        <option class="city"></option>
+      </select>
+    </section>
+
+    <hr>
+    <h2>Atividade</h2>
+
+  </main>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/Repository.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+
+</html>
