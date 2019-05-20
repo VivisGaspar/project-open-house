@@ -5,6 +5,16 @@ $(document).ready(function () {
  
   $(".sign-up-button").click(signUpClick);
   $(".sign-in-button").click(signInClick);
+
+  $(".sign-in").click(function(){
+    $(".section-sign-up").css("display", "none");
+    $('.section-sign-in').show();
+  });
+  $(".sign-up").click(function(){
+    $(".section-sign-up").show();
+    $(".section-sign-in").css("display", "none");
+  }); 
+ 
 });
 
 function signUpClick(event) {
@@ -78,7 +88,6 @@ function handleError(error) {
 
 function getStateonApi() {
   let estado = "";
-  let b = "";
   const url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
   fetch(url)
     .then(resp => resp.json())
