@@ -1,8 +1,20 @@
 var database = firebase.database();
 
-$(document).ready(function() {
+$(document).ready(function () {
+  getStateonApi();
+ 
   $(".sign-up-button").click(signUpClick);
   $(".sign-in-button").click(signInClick);
+
+  $(".sign-in").click(function(){
+    $(".section-sign-up").css("display", "none");
+    $('.section-sign-in').show();
+  });
+  $(".sign-up").click(function(){
+    $(".section-sign-up").show();
+    $(".section-sign-in").css("display", "none");
+  }); 
+ 
 });
 
 function signUpClick(event) {
@@ -30,7 +42,7 @@ function signInClick(event) {
 
 function createUser(name, birthday, gender, state, city, email, password) {
   firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then(function(response) {
+    .then(function (response) {
       if (response.operationType === "signIn") {
         var userId = response.user.uid;
 
@@ -38,19 +50,19 @@ function createUser(name, birthday, gender, state, city, email, password) {
         signInRedirect(userId);
       }
     })
-    .catch(function(error) { handleError(error); });
+    .catch(function (error) { handleError(error); });
 }
 
 function loginUserAuth(email, password) {
   firebase.auth().signInWithEmailAndPassword(email, password)
-    .then(function(response) {
+    .then(function (response) {
       if (response.operationType === "signIn") {
         var userId = response.user.uid;
         sessionStorage["USER_ID"] = userId;
         signInRedirect(userId);
       }
     })
-    .catch(function(error) { handleError(error); });
+    .catch(function (error) { handleError(error); });
 }
 
 function createUserInDB(id, name, birthday, gender, state, city, email) {
@@ -74,28 +86,36 @@ function handleError(error) {
   console.log(error.code, error.message);
 }
 
-function Liststate(){
-  let state = $(".sign-up-state");
-  return state;
-}
-
-function ListCity(){
-  let city = $(".sign-up-city").val();
-}
-
-function getStateCityonApi() {
+function getStateonApi() {
   let estado = "";
   const url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
   fetch(url)
     .then(resp => resp.json())
-    .then(resp => resp.forEach(element => {
-      console.log(element.nome);
-      console.log(element.id);
-      estado = `<option value="${element.id}">${element.nome}</option>`
-      $(".sign-up-state").append(estado);
-    })
-    );
+    .then(function (resp) {
+      resp.forEach(function (element) {
+        estado += `<option value="${element.id}">${element.nome}</option>`
+      })
+      $(".sign-up-state").html(estado);
+
+      getCityonApi(resp[0].id);
+
+      $(".sign-up-state").change(function () {
+        getCityonApi($(".sign-up-state").val());
+      });
+    }
+    )
 }
 
-getStateCityonApi();
+function getCityonApi(valState) {
+  let cidade = "";
+  let urlCitys = `http://servicodados.ibge.gov.br/api/v1/localidades/estados/${valState}/municipios`
 
+  fetch(urlCitys)
+    .then(resp => resp.json())
+    .then(resp => resp.forEach(element => {
+      cidade += `<option value="${element.nome}">${element.nome}</option>`
+      $(".sign-up-city").html(cidade);
+    }
+    )
+    );
+}
