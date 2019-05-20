@@ -1,10 +1,7 @@
 body {
-  margin: 17.5% 0 17.5% 0;
+  margin: 22.5% 0 17.5% 0;
   padding: 0;
   background-color: #464646;
-}
-
-.font-family {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -36,6 +33,7 @@ body {
   position: fixed;
   background-color: #464646;
   border-bottom: 1px solid #C64706;
+  z-index: 1;
 }
 
 .logo {
@@ -60,6 +58,7 @@ body {
   position: fixed;
   background-color: #C1C1C1;
   border-top: 1px solid #C64706;
+  z-index: 1;
 }
 
 .footter-nav-icons {
@@ -91,6 +90,51 @@ body {
 .icon-border {
   border-left: 1px solid #C64706;
   border-right: 1px solid #C64706;
+}
+
+.search-filter-align {
+  margin: 20px 15px 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search-input {
+  position: relative;
+}
+
+.search-bar {
+  border: none;
+  background-color: #C1C1C1;
+  border-radius: 10px;
+  height: 45px;
+  width: 230px;
+  padding: 15px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 25px;
+  color: #707070;
+}
+
+.btn-filter {
+  height: 45px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #C64706;
+  border: 0;
+  border-radius: 10px;
+  color: #C1C1C1;
+}
+
+.filter-icon {
+  font-size: 15px;
+  margin-left: 2px;
 }
 
 /* body {
