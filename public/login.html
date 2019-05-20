@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Login</title>
   <link rel="stylesheet" href="css/login.css">
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
@@ -29,7 +29,7 @@
     <form class="form-sign-in">
       <input type="text" class="sign-in-email rounded-border" placeholder="E-mail" />
       <input type="password" class="sign-in-password rounded-border" placeholder="Senha" />
-      <div class="content-link">
+
         <p class=""><u>Esqueci a senha</u></p>
         <input type="checkbox" class="form-check-input" id="checkbox-reminder">
         <label class="font-p" for="checkbox-reminder">Continuar Logado</label>
@@ -41,26 +41,18 @@
     <form class="form-sign-up">
       <input type="text" class="sign-up-name rounded-border" placeholder="Nome completo" />
       <input type="date" class="sign-up-birthday rounded-border bday" />
-      <div class="form-group">
-        <select class="sign-up-gender rounded-border">
-          <option selected>Masculino</option>
-          <option>Feminino</option>
-          <option>Outro</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <select class="sign-up-state rounded-border">
-        </select>
-      </div>
-      <div class="form-group">
-        <select class="sign-up-city rounded-border">
-        </select>
-      </div>
+      <select class="sign-up-gender rounded-border">
+        <option selected>Masculino</option>
+        <option>Feminino</option>
+        <option>Outro</option>
+      </select>
+      <select class="sign-up-state rounded-border">
+      </select>
+      <select class="sign-up-city rounded-border">
+      </select>
       <input type="text" class="sign-up-email rounded-border" placeholder="E-mail" />
       <input type="password" class="sign-up-password rounded-border" placeholder="Senha" />
-      </fieldset>
       <button type="button" class="sign-up-button  btn-login">Cadastrar</button>
-      </div>
     </form>
   </section>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

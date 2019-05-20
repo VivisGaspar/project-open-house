@@ -93,7 +93,7 @@ function getStateonApi() {
     .then(resp => resp.json())
     .then(function (resp) {
       resp.forEach(function (element) {
-        estado += `<option value="${element.id}">${element.nome}</option>`
+        estado += `<option value="${element.id}" data-state='${element.nome}']'>${element.nome}</option>`
       })
       $(".sign-up-state").html(estado);
 
