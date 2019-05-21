@@ -78,7 +78,7 @@ function createUserInDB(id, name, birthday, gender, state, city, email) {
 }
 
 function signInRedirect(userId) {
-  window.location = '../index.html';
+  window.location = '../profile.html';
 }
 
 function handleError(error) {
