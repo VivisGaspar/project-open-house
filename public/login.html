@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/login.css">
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
@@ -14,28 +14,51 @@
 </head>
 
 <body>
-  <section class="section-logo">
-    <nav class="nav-bar">
-      <img class="logo" src="images/logo.png" alt="Logo Conectadas" />
+  <section class="section-header">
+    <h1 class="logo">
+      <img src="images/logo-ms.png" alt="MOVA-SE">
+    </h1>
+    <nav class="header-nav">
+      <ul class="header-nav-li">
+        <li class="font-size-m sign-in">LOGIN</li>
+        <li class="font-size-m sign-up">CADASTRO</li>
+      </ul>
     </nav>
   </section>
-  <section id="sign-in" class="section-sign-in">
-    <div class="bg-sign-in">
-      <form class="form-sign-in">
-        <fieldset>
-          <legend class="legend-text">Faça seu login</legend>
-          <input type="text" class="sign-in-email input" placeholder="E-mail" />
-          <input type="password" class="sign-in-password input" placeholder="Senha" />
-        </fieldset>
-        <div class="content-link">
-          <a href="#sign-up" class="link-text">Faça seu cadastro</a>
-          <a href="#" class="link-text right">Esqueci Senha</a>
-        </div>
-        <button type="button" class="sign-in-button button">Entrar</button>
-      </form>
-    </div>
+  <section class="section-sign-in">
+    <form class="form-sign-in">
+      <input type="text" class="sign-in-email rounded-border" placeholder="E-mail" />
+      <input type="password" class="sign-in-password rounded-border" placeholder="Senha" />
+      <div class = "login-options">
+        <p class="font-size-p"><u>Esqueci a senha</u></p>
+        <input type="checkbox" class="form-check-input" id="checkbox-reminder">
+        <label class="font-size-p" for="checkbox-reminder">Continuar Logado</label>
+      </div>
+      </div>
+      <button type="button" class="sign-in-button btn-login">Entrar</button>
+    </form>
   </section>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <section class="section-sign-up d-none">
+    <form class="form-sign-up">
+      <input type="text" class="sign-up-name rounded-border" placeholder="Nome completo" />
+      <input type="date" class="sign-up-birthday rounded-border bday" />
+      <select class="sign-up-gender rounded-border">
+        <option selected>Masculino</option>
+        <option>Feminino</option>
+        <option>Outro</option>
+      </select>
+      <select class="sign-up-state rounded-border">
+      </select>
+      <select class="sign-up-city rounded-border">
+      </select>
+      <input type="email" class="sign-up-email rounded-border" placeholder="E-mail" />
+      <input type="password" class="sign-up-password rounded-border" placeholder="Senha" />
+      <button type="button" class="sign-up-button  btn-login">Cadastrar</button>
+    </form>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
   <script src="js/auth.js"></script>
 </body>
 

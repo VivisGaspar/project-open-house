@@ -38,47 +38,44 @@
       <img class="picture">
       
       <section>
-        <div class="rounded-border">
-          <span class="name"></span><i class="fas fa-pen"></i>
+        
+        <div>
+          <input type="text" class="rounded-border name-input name">
+          <i class="fas fa-pen edit-name-icon"></i>
         </div>
-
-        <div class="rounded-border"><span class="email"></span></div>
-
-        <input id="date" type="date" class="rounded-border bday hidden" />
-        <p class="date rounded-border">21/06/2014</p>
-
-        <select class="rounded-border">
-          <option class="gender"></option>
-          <option value="feminino">Feminino</option>
-          <option value="masculino">Masculino</option>
-          <option value="outro">Outro</option>
-        </select>
-
-        <select class="rounded-border hidden">
-          <option class="state"></option>
-        </select>
-        <p class="date rounded-border">São Paulo</p>
-
-        <select class="rounded-border hidden">
-          <option class="city"></option>
-        </select>
-        <p class="date rounded-border">São Paulo</p>
-
         
-        <input type="range" name="range" id="range">
+        <div class="edit-align">
+          <input id="date" type="date" class="rounded-border bday"/>
+          <select class="rounded-border gender">
+            <option>Feminino</option>
+            <option>Masculino</option>
+            <option>Outro</option>
+          </select>
+        </div>
         
-        <textarea name="about" id="about" cols="30" rows="10"></textarea>
+        <div class="edit-align">
+          <select class="rounded-border sign-up-state"></select>
+          <select class="rounded-border sign-up-city"></select>
+        </div>
+        
+        <input type="email" class="rounded-border email" disabled>
+        
+        <input type="range" name="range" id="range" class="range">
+        
+        <textarea name="about" id="about" class="rounded-border about" placeholder="Conte um pouco sobre você"></textarea>
         
       </section>
-
-      <button>ATIVIDADES</button>
-
-      <button>SALVAR</button>
-      <button>CANCELAR</button>
-
+      
+      <button class="btn font-size-m">ATIVIDADES</button>
+      
+      <div class="edit-align">
+        <button class="btn font-size-m">SALVAR</button>
+        <button class="btn font-size-m">CANCELAR</button>
+      </div>
+      
     </section>
   </main>
-
+  
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
   crossorigin="anonymous"></script>
