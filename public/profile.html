@@ -16,16 +16,16 @@
 <body>
   <header>
     <nav class="header-nav">
-      <!-- <img class="header-nav-avatar" src="../images/avatar.png" alt="Perfil"> -->
+
       <p class="header-nav-avatar"></p>
       <h1 class="logo">
         <img src="../images/logo-ms.png" alt="MOVA-SE">
       </h1>
-      <div class="settings">	
-        <i class="fas fa-bell settings-icons"></i>
-        <i class="fas fa-cog settings-icons"></i>
-        <i class="fas fa-sign-out-alt settings-icons"></i>
-      </div>
+      <ul class="settings">	
+        <li><i class="fas fa-bell settings-icons"></i></li>
+        <li><i class="fas fa-cog settings-icons"></i></li>
+        <li><a id="logout" ref="#"><i class="fas fa-sign-out-alt settings-icons"></i></a></li>
+      </ul>
     </nav>			
   </header>
   
@@ -58,7 +58,7 @@
         </div>
         
         <input type="email" class="rounded-border email" disabled>
-        
+        <p class="info-range"></p>
         <input type="range" name="range" id="range" class="range">
         
         <textarea name="about" id="about" class="rounded-border about" placeholder="Conte um pouco sobre você"></textarea>
@@ -68,19 +68,18 @@
       <button class="btn font-size-m">ATIVIDADES</button>
       
       <div class="edit-align">
-        <button class="btn font-size-m">SALVAR</button>
+        <button id="save" class="btn font-size-m">SALVAR</button>
         <button class="btn font-size-m">CANCELAR</button>
       </div>
       
     </section>
   </main>
   
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="js/firebase-config.js"></script>
   <script src="js/Repository.js"></script>
+  <script src="js/ibge.js"></script>
   <script src="js/profile.js"></script>
+  <script src="js/auth.js"></script>
 </body>
-
 </html>
