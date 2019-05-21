@@ -34,29 +34,33 @@
     <section class="container">
       <p class="font-size-m profile-title">PERFIL</p>
       
-			<div id="match-image" class="picture"></div>                       
-      <img class="picture">
+      <label class="profile-align">
+        <div class="profile-image picture"></div>                       
+        <div class="edit-profile-image">
+          <p class="font-size-m">EDITAR FOTO</p>
+        </div>                             
+      </label>
       
       <section>
         
-        <div>
-          <input type="text" class="rounded-border name-input name">
+        <label class="name-input">
+          <input type="text" class="rounded-border name">
           <i class="fas fa-pen edit-name-icon"></i>
-        </div>
+        </label>
         
-        <div class="edit-align">
+        <label class="edit-align">
           <input id="date" type="date" class="rounded-border bday"/>
           <select class="rounded-border gender">
             <option>Feminino</option>
             <option>Masculino</option>
             <option>Outro</option>
           </select>
-        </div>
+        </label>
         
-        <div class="edit-align">
+        <label class="edit-align">
           <select class="rounded-border sign-up-state"></select>
           <select class="rounded-border sign-up-city"></select>
-        </div>
+        </label>
         
         <input type="email" class="rounded-border email" disabled>
         

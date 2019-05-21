@@ -111,14 +111,50 @@ body {
   border-radius: 10px;
 }
 
+.profile-image {
+  overflow: hidden;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  border-radius: 50%;
+  background-color: #C1C1C1;
+
+}
+
+.profile-image img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.edit-profile-image {
+  position: absolute;
+  width: 150px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 90px 90px;
+  background-color: #707070;
+  color: #C1C1C1;
+}
+
+.profile-align {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
 .name-input{
   position: relative;
 }
 
 .edit-name-icon {
   position: absolute;
-  right: 50px;
-  top: 148px;
+  right: 15px;
+  top: 5px;
   font-size: 15px;
   color: #707070;
 }
