@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
 
 body {
-  margin: 22.5% 0 17.5% 0;
+  margin: 22.5% 0 10% 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
   background-color: #464646;
@@ -75,7 +75,7 @@ body {
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 .header-profile {
@@ -99,14 +99,68 @@ body {
   color: #C1C1C1;
 }
 
-span {
+.rounded-border{
+  height: 40px;
+  margin-top: 20px;
+  padding-left: 15px;
+  background-color: #C1C1C1;
+  color: #707070;
   font-size: 12px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;
 }
 
-.rounded-border{
-  background-color: #C1C1C1;
-  border: 1px solid #C1C1C1;
+.name-input{
+  position: relative;
+}
+
+.edit-name-icon {
+  position: absolute;
+  right: 50px;
+  top: 148px;
+  font-size: 15px;
+  color: #707070;
+}
+
+.name, .email, .about {
+  width: 100%;
+}
+
+.bday, .gender {
+  width: 47%;
+}
+
+.sign-up-state {
+  width: 37%;
+}
+
+.sign-up-city {
+  width: 57%;
+}
+
+.range {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.about {
+  height: 100px;
+  padding-top: 10px;
+}
+
+.edit-align {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 140px;
+  height: 35px;
+  margin: 20px 5px 0;
+  background-color: #C64706;
+  color: #C1C1C1;
+  text-align: center;
+  border: none;
   border-radius: 10px;
-  padding: 10px 10px;
-  margin: 20px;
 }
