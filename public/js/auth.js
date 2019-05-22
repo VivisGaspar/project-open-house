@@ -8,12 +8,12 @@ $(document).ready(function() {
 
   $('.sign-in').on('click', function() {
     $('.section-sign-up').css('display', 'none');
-    $('.section-sign-in').show();
+    $('.section-sign-in').css('display', 'flex');
     $(".sign-up").removeClass('active');
     $('.sign-in').addClass('active');
   });
   $('.sign-up').on('click', function() {
-    $('.section-sign-up').show();
+    $('.section-sign-up').css('display', 'flex');
     $('.section-sign-in').css('display', 'none');
     $(".sign-up").addClass('active');
     $(".sign-in").removeClass('active');
