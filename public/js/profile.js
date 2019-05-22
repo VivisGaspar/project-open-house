@@ -1,4 +1,4 @@
-const database = firebase.database();
+database = firebase.database();
 
 let USER_ID = sessionStorage['USER_ID'];
 if (!USER_ID) window.location.href = 'login.html';
