@@ -7,12 +7,16 @@ $(document).ready(function () {
   $(".sign-in-button").click(signInClick);
 
   $(".sign-in").click(function(){
-    $(".section-sign-up").css("display", "none");
-    $('.section-sign-in').show();
+    $(".section-sign-up").addClass('hidden');
+    $('.section-sign-in').removeClass('hidden');
+    $(".sign-up").removeClass('active');
+    $('.sign-in').addClass('active');
   });
   $(".sign-up").click(function(){
-    $(".section-sign-up").show();
-    $(".section-sign-in").css("display", "none");
+    $(".section-sign-up").removeClass('hidden');
+    $(".section-sign-in").addClass('hidden');
+    $(".sign-up").addClass('active');
+    $(".sign-in").removeClass('active');
   }); 
  
 });
