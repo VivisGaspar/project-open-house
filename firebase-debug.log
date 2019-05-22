@@ -85,3 +85,41 @@
 [debug] [2019-05-22T03:27:21.949Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-05-22T04:41:50.621Z] Error: socket hang up
+    at createHangUpError (_http_client.js:323:15)
+    at TLSSocket.socketOnEnd (_http_client.js:426:23)
+    at TLSSocket.emit (events.js:187:15)
+    at TLSSocket.EventEmitter.emit (domain.js:441:20)
+    at endReadableNT (_stream_readable.js:1094:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-05-22T04:43:58.702Z] ----------------------------------------------------------------------
+[debug] [2019-05-22T04:43:58.711Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Nina\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-05-22T04:43:58.711Z] CLI Version:   6.9.2
+[debug] [2019-05-22T04:43:58.712Z] Platform:      win32
+[debug] [2019-05-22T04:43:58.712Z] Node Version:  v10.15.0
+[debug] [2019-05-22T04:43:58.738Z] Time:          Wed May 22 2019 01:43:58 GMT-0300 (GMT-03:00)
+[debug] [2019-05-22T04:43:58.739Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-22T04:43:58.768Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-22T04:43:58.769Z] > authorizing via signed-in user
+[debug] [2019-05-22T04:43:58.769Z] [iam] checking project mova-se-db for permissions ["firebase.projects.get"]
+[debug] [2019-05-22T04:43:58.771Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-05-22T04:43:58.771Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-05-22T04:43:59.048Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-22T04:43:59.095Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mova-se-db:testIamPermissions  
+
+[debug] [2019-05-22T04:44:00.281Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-22T04:44:00.282Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mova-se-db  
+ 
+[debug] [2019-05-22T04:44:01.259Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Nina\Documents\Laboratoria\Projetos\project-open-house'...
+[info] 
+[debug] [2019-05-22T04:44:01.269Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/89114266783/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-22T04:44:02.917Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
