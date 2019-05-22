@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>MOVA-SE</title>
-	
+
 	<link rel="stylesheet" href="./css/match.css">
-	
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-	
-	<script src="/__/firebase/5.9.1/firebase-app.js"></script>
-	<script src="/__/firebase/5.8.4/firebase-auth.js"></script>
-	<script src="/__/firebase/5.9.1/firebase-database.js"></script> 
+
+	<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+	<script src="js/firebase-config.js"></script>
+
 </head>
 
 <body>
@@ -24,13 +28,13 @@
 			<h1 class="logo">
 				<img src="../images/logo-ms.png" alt="MOVA-SE">
 			</h1>
-			<div class="settings">	
+			<div class="settings">
 				<i class="fas fa-bell settings-icons"></i>
 				<i class="fas fa-cog settings-icons"></i>
 				<i class="fas fa-sign-out-alt settings-icons"></i>
 			</div>
 		</nav>
-		
+
 		<aside class="aside-menu">
 			<nav class="menu-nav">
 				<ul class="menu-nav-icons">
@@ -50,7 +54,7 @@
 						</a>
 					</li>
 				</ul>
-			</nav>			
+			</nav>
 			<section class="search-filter-align">
 				<label class="search-input">
 					<input type="search" name="search" id="search-input" class="search-bar" placeholder="Busca">
@@ -62,28 +66,33 @@
 				</button>
 			</section>
 		</aside>
-		
+
 	</header>
-	
+
 	<main class="match-align">
 		<section class="match">
-			<div id="match-image" class="match-image"></div>                       
+			<div class="match">
+				<ul class="tinder--cards">
+				</ul>
+			</div>
 			<div class="match-btn">
 				<i class="far fa-times-circle match-icon-delete"></i>
-				<i class="far fa-check-circle match-icon-add"></i>                 
+				<i class="far fa-check-circle match-icon-add"></i>
 			</div>
 		</section>
-		
-		<section id="match-about">                                                        
-		</section>          
+
+		<section id="match-about">
+		</section>
 	</main>
-	
-	<script src="https://hammerjs.github.io/dist/hammer.js"></script>     
-	<script src="../js/match.js"></script> 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-	crossorigin="anonymous">
-</script>
-<script src="js/firebase-config.js"></script> 
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+		</script>
+	<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+	<script src="js/match.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+		</script>
+
 </body>
+
 </html>
