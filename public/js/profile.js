@@ -10,8 +10,13 @@ $(document).ready(async function() {
   const db = new Repository(database);
   const user = await db.getUserById(USER_ID);
 
-  $('#logout').on('click', logout);
+  $('#slider-value').html($('#range').val());
 
+  $('#range').on('input', function() {
+    const value = $(this).val();
+    $('#slider-value').text(value);
+  });  
+  
   $('.picture').html(user.picture);
   $('.name').val(user.name);
   $('.bday').val(user.birthday);
@@ -22,9 +27,9 @@ $(document).ready(async function() {
   }, 500);
   $('.email').val(user.email);
   $('#range').val(user.range);
-  $('.info-range').html((user.range / 10) + ' km de alcance');
+  $('.info-range #slider-value').text(user.range);
   $('#about').val(user.about);
-
+  $('#logout').on('click', logout); 
 
   $('#save').on('click', function() {
     const newUser = {
@@ -38,18 +43,10 @@ $(document).ready(async function() {
     }
 
     db.updateUser(USER_ID, newUser);
+    window.location.reload();
   });
-});
 
-function logout(event) {
-  event.preventDefault();
-  firebase
-    .auth()
-    .signOut()
-    .then(function() {
-      sessionStorage.clear();
-      window.location = '../login.html';
-    }, function(error) {
-      console.error(error);
-    });
-}
+  $('#cancel').on('click', function() {
+    window.location.reload();
+  })
+});

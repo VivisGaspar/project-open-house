@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
 body {
   margin: 22.5% 0 10% 0;
   padding: 0;
@@ -52,6 +53,15 @@ ul {
   height: 45px;
   background-color: #C1C1C1;
   border-radius: 50%;
+  margin:0;
+  position: relative;
+}
+
+.img-avatar{
+  position: absolute;
+  height: 80%;
+  left: 9%;
+  top: 5%;
 }
 
 .logo {
@@ -122,8 +132,8 @@ ul {
 
 .edit-name-icon {
   position: absolute;
-  right: 15px;
-  top: 5px;
+  right: 50px;
+  top: 148px;
   font-size: 15px;
   color: #707070;
 }
