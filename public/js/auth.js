@@ -3,8 +3,8 @@ var database = firebase.database();
 $(document).ready(function() {
   getStateonApi();
 
-  $('.sign-up-button').on('click', signUpClick);
-  $('.sign-in-button').on('click', signInClick);
+  $('.sign-up').on('click', signUpClick);
+  $('.sign-in').on('click', signInClick);
 
   $('.sign-in').on('click', function() {
     $('.section-sign-up').css('display', 'none');
@@ -14,6 +14,31 @@ $(document).ready(function() {
     $('.section-sign-up').show();
     $('.section-sign-in').css('display', 'none');
   });
+
+  // $('.sign-up-button').on('click', signUpClick);
+  // $('.sign-in-button').on('click', signInClick);
+
+  // $('.sign-in').on('click', function() {
+  //   $('.section-sign-up').css('display', 'none');
+  //   $('.section-sign-in').show();
+  // });
+  // $('.sign-up').on('click', function() {
+  //   $('.section-sign-up').show();
+  //   $('.section-sign-in').css('display', 'none');
+  // });
+  // $(".sign-in").click(function(){
+  //   $(".section-sign-up").addClass('hidden');
+  //   $('.section-sign-in').removeClass('hidden');
+  //   $(".sign-up").removeClass('active');
+  //   $('.sign-in').addClass('active');
+  // });
+  // $(".sign-up").click(function(){
+  //   $(".section-sign-up").removeClass('hidden');
+  //   $(".section-sign-in").addClass('hidden');
+  //   $(".sign-up").addClass('active');
+  //   $(".sign-in").removeClass('active');
+  // }); 
+ 
 });
 
 function signUpClick(event) {
