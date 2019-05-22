@@ -1,21 +1,23 @@
 function getStateonApi() {
-  let estado = '';
+  let estados = '';
   const url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
   fetch(url)
     .then(resp => resp.json())
     .then(function(resp) {
+      resp = resp.sort(sortRulesForEstado);
       resp.forEach(function(element) {
-        estado += `<option value='${element.id}' data-state='${element.nome}']'>${element.nome}</option>`
+          estados += `<option data-state='${element.nome}' value='${element.id}'>
+            ${element.nome}
+          </option>`;
       })
-      $('.sign-up-state').html(estado);
+      $('.sign-up-state').html(estados);
 
       getCityonApi(resp[0].id);
 
       $('.sign-up-state').change(function() {
         getCityonApi($('.sign-up-state').val());
       });
-    }
-    )
+    });
 }
 
 function getCityonApi(valState) {
@@ -24,10 +26,16 @@ function getCityonApi(valState) {
 
   fetch(urlCitys)
     .then(resp => resp.json())
-    .then(resp => resp.forEach(element => {
-      cidade += `<option value='${element.nome}'>${element.nome}</option>`
-      $('.sign-up-city').html(cidade);
-    }
-    )
-    );
+    .then(resp => {
+      resp.forEach(element => {
+        cidade += `<option value='${element.nome}'>${element.nome}</option>`
+        $('.sign-up-city').html(cidade);
+      });
+    });
+};
+
+const sortRulesForEstado = (a,b) => {
+  if(a.nome < b.nome) return -1;
+  if(a.nome > b.nome) return 1;
+  return 0;
 }
