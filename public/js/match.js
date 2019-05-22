@@ -1,5 +1,5 @@
+$('#logout').on('click', logout);
 const element = document.getElementById("match-image")
-
 let index = 0;
 
 function getPhotoFromDB(){
