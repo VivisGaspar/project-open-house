@@ -1,76 +1,110 @@
-$('#logout').on('click', logout);
-const element = document.getElementById("match-image")
-let index = 0;
-
-function getPhotoFromDB(){
-	const url = "https://api.giphy.com/v1/gifs/trending?&api_key=7Mc3xZd6KslRRtCtWe72NCyO1HeKYRks" 
-	fetch(url)
-	.then(resp => resp.json())
-	.then(resp => getDataFromBD(resp.data))
-}
-
-function getDataFromBD(data){
-	const imgUrl = data[index].images.fixed_height.url;
-	element.innerHTML = `<img src="${imgUrl}">`
-	index++;
-	console.log(imgUrl);     
-}
-
-const hammertime = new Hammer(element);
-hammertime.on('swipe', function(ev) {
-	console.log(ev);
-	getPhotoFromDB();
+const database = firebase.database();
+let USER_ID = sessionStorage["USER_ID"];
+const collectionUsers = database.ref('users/');
+const collectionUser = database.ref('users/' + USER_ID);
+console.log(USER_ID)
+//Btn controls
+$('.match-icon-delete').on('click', function (event) {
+	let topCard = $('.js-swiping-card').last();
+	swipeEnded(event, 'left', topCard);
 });
+$('.match-icon-add').on('click', function (event) {
+	let topCard = $('.js-swiping-card').last();
+	swipeEnded(event, 'right', topCard);
+});
+if (!USER_ID) window.location.href = "login.html";
 
+getUsersFromDB();
 
-getPhotoFromDB()
+function usersTemplate(name, ) {
+	let template =
+		`
+		<li>
+			<div class="card js-swiping-card">   
+				<h1>${name}</h1>
+			</div>
+		</li> `
 
+	$(".tinder--cards").prepend(template)
+}
 
-// const database = firebase.database();
+function getUsersFromDB() {
+	collectionUsers.on('value', function (snapshot) {
+		const users = snapshot.val();
+		Object.keys(users).forEach(key => {
+			usersTemplate(users[key].name)
+		})
+	});
+}
 
-// let USER_ID = sessionStorage["USER_ID"];
-// if (!USER_ID) window.location.href = "login.html";
+//swipe
 
-// const image = document.getElementById("match-image")
-// const about = document.getElementById("match-about")
+	const deltaThreshold = 100;
+	const deltaX = 0;
 
-// let index = 0;
+function swipeEnded(event, direction, $card) {
+	let directionFactor, transform;
+	if (event.type === 'click') {
+		directionFactor = direction === 'right' ? -1 : 1;
+	}
+	else if (event.deltaX) {
+		directionFactor = event.deltaX >= 0 ? -1 : 1;
+	}
 
-// function getPhotoFromDB(){
-// 	const url = "https://api.giphy.com/v1/gifs/trending?&api_key=7Mc3xZd6KslRRtCtWe72NCyO1HeKYRks" 
-// 	fetch(url)
-// 	.then(resp => resp.json())
-// 	.then(resp => getDataFromBD(resp.data))
-// }
+		if (event.deltaX && deltaX > deltaThreshold || event.deltaX && deltaX < -1 * deltaThreshold || direction) {
+		transform = 'translate(' + directionFactor * -100 + 'vw, 0) rotate(' + directionFactor * -5 + 'deg)';
+		$card
+			.delay(100)
+			.queue(function () {
+				$(this).css('transform', transform).dequeue();
+			})
+			.delay(300)
+			.queue(function () {
+				$(this).addClass('done').remove();
+			});
+	}
+	
+	else {
+		transform = 'translate(0, 0) rotate(0)';
+		$card.css({
+			'transform': transform,
+		});
+	}
+}
 
-// function getDataFromBD(data){
-// 	const image = data[index].picture;
-// 	image.innerHTML = `<img src="${image}">`
+function swipeLeft(event, $card) {
+	var transform;
+	deltaX = event.deltaX;
+	transform = 'translate(' + deltaX * 0.8 + 'px, 0) rotate(5deg)';
+	
+	$card.css({
+		'transform': transform,
+	});
+}
 
-// 	const name = data[index].name;
-// 	const age = data[index].age;
-// 	const about = data[index].about;
-// 	const activities = data[index].activities;
+function swipeRight(event, $card) {
+	var transform;
+	deltaX = event.deltaX;
+	transform = 'translate(' + deltaX * 0.8 + 'px, 0) rotate(-5deg)';
+	
+	$card.css({
+		'transform': transform,
+	});
+}
 
-// 	about.innerHTML = `
-// 	<p class="name-age font-size-g">${name}, ${age}</p>
-// 	<p class="about-title font-size-p">SOBRE${name}</p>
-// 	<p class="text-about font-size-p">${about}</p>
-// 	<section class="activities">
-// 		<p class="about-title font-size-p">ATIVIDADES</p>
-// 		<div>${activities}</div>
-// 	</section>
-// 	`
-// 	index++;
-// 	console.log(imgUrl);
-// 	// preciso pegar a foto, distância, nome, idade, resumo e atividades   
-// }
+//Events
+$('.js-swiping-card').each(function (index, element) {
+	let card = element;
 
-// const hammertime = new Hammer(element);
-// hammertime.on('swipe', function(ev) {
-// 	console.log(ev);
-// 	getPhotoFromDB();
-// });
+	hammertime = new Hammer(element);
 
-
-// getPhotoFromDB()
+	hammertime.on('panleft swipeleft', function (event) {
+		swipeLeft(event, card);
+	});
+	hammertime.on('panright swiperight', function (event) {
+		swipeRight(event, card);
+	});
+	hammertime.on('panend', function (event) {
+		swipeEnded(event, false, card);
+	});
+});

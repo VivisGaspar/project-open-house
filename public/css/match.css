@@ -357,6 +357,61 @@ ul {
     color: #6AC259;
   }
 }
+/*MATCH*/
+
+/*Swipe*/
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+  
+}
+.final-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.stack {
+  position: relative;
+  height: 250px;
+  width: 400px;
+  max-width: calc(100vw - 60px);
+  margin: 50px auto;
+}
+.card {
+  height: 200px;
+  width: 150px;
+  max-width: 100%;
+  padding: 30px;
+  background-color:  #C1C1C1;
+  border: 1px solid grey;
+  border-radius: 10px;
+  position: absolute;
+  
+}
+.card-illustration {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+.card-illustration:focus {
+  transform: scale(1.1);
+}
+.card-illustration:hover {
+  transform: scale(1.1); 
+}
+
+.js-swiping-card {
+  transition: transform 0.5s;
+}
+
+
+
 
 /* body {
   font-family: 'Roboto', sans-serif;   
