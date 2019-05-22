@@ -123,6 +123,7 @@ ul {
 .edit-name-icon {
   position: absolute;
   right: 15px;
+  top: 5px;
   font-size: 15px;
   color: #707070;
 }
