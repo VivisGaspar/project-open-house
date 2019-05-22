@@ -1,72 +1,71 @@
-var database = firebase.database();
+database = firebase.database();
 
-$(document).ready(function () {
+$(document).ready(function() {
   getStateonApi();
- 
-  $(".sign-up-button").click(signUpClick);
-  $(".sign-in-button").click(signInClick);
 
-  $(".sign-in").click(function(){
-    $(".section-sign-up").addClass('hidden');
-    $('.section-sign-in').removeClass('hidden');
+  $('.sign-up-button').on('click', signUpClick);
+  $('.sign-in-button').on('click', signInClick);
+
+  $('.sign-in').on('click', function() {
+    $('.section-sign-up').css('display', 'none');
+    $('.section-sign-in').css('display', 'flex');
     $(".sign-up").removeClass('active');
     $('.sign-in').addClass('active');
   });
-  $(".sign-up").click(function(){
-    $(".section-sign-up").removeClass('hidden');
-    $(".section-sign-in").addClass('hidden');
+  $('.sign-up').on('click', function() {
+    $('.section-sign-up').css('display', 'flex');
+    $('.section-sign-in').css('display', 'none');
     $(".sign-up").addClass('active');
     $(".sign-in").removeClass('active');
-  }); 
- 
+  });
 });
 
 function signUpClick(event) {
   event.preventDefault();
 
-  let name = $(".sign-up-name").val();
-  let birthday = $(".sign-up-birthday").val();
-  let gender = $(".sign-up-gender").val();
-  let state = $(".sign-up-state").val();
-  let city = $(".sign-up-city").val();
-  let email = $(".sign-up-email").val();
-  let password = $(".sign-up-password").val();
-
+  let name = $('.sign-up-name').val();
+  let birthday = $('.sign-up-birthday').val();
+  let gender = $('.sign-up-gender').val();
+  let state = $('.sign-up-state').val();
+  let city = $('.sign-up-city').val();
+  let email = $('.sign-up-email').val();
+  let password = $('.sign-up-password').val();
+  
   createUser(name, birthday, gender, state, city, email, password);
 }
 
 function signInClick(event) {
   event.preventDefault();
 
-  var email = $(".sign-in-email").val();
-  var password = $(".sign-in-password").val();
+  var email = $('.sign-in-email').val();
+  var password = $('.sign-in-password').val();
 
   loginUserAuth(email, password);
 }
 
 function createUser(name, birthday, gender, state, city, email, password) {
   firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then(function (response) {
-      if (response.operationType === "signIn") {
+    .then(function(response) {
+      if (response.operationType === 'signIn') {
         var userId = response.user.uid;
 
         createUserInDB(userId, name, birthday, gender, state, city, email);
         signInRedirect(userId);
       }
     })
-    .catch(function (error) { handleError(error); });
+    .catch(function(error) { handleError(error); });
 }
 
 function loginUserAuth(email, password) {
   firebase.auth().signInWithEmailAndPassword(email, password)
-    .then(function (response) {
-      if (response.operationType === "signIn") {
+    .then(function(response) {
+      if (response.operationType === 'signIn') {
         var userId = response.user.uid;
-        sessionStorage["USER_ID"] = userId;
+        sessionStorage['USER_ID'] = userId;
         signInRedirect(userId);
       }
     })
-    .catch(function (error) { handleError(error); });
+    .catch(function(error) { handleError(error); });
 }
 
 function createUserInDB(id, name, birthday, gender, state, city, email) {
@@ -77,7 +76,10 @@ function createUserInDB(id, name, birthday, gender, state, city, email) {
     state: state,
     city: city,
     email: email,
-    picture: '../images/avatar.png'
+    picture: '../images/avatar.png',
+    range: '50',
+    about: '',
+    age: calculateAge(birthday)
   });
 }
 
@@ -90,36 +92,23 @@ function handleError(error) {
   console.log(error.code, error.message);
 }
 
-function getStateonApi() {
-  let estado = "";
-  const url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
-  fetch(url)
-    .then(resp => resp.json())
-    .then(function (resp) {
-      resp.forEach(function (element) {
-        estado += `<option value="${element.id}" data-state='${element.nome}']'>${element.nome}</option>`
-      })
-      $(".sign-up-state").html(estado);
-
-      getCityonApi(resp[0].id);
-
-      $(".sign-up-state").change(function () {
-        getCityonApi($(".sign-up-state").val());
-      });
-    }
-    )
+function logout(event) {
+  event.preventDefault();
+  firebase
+    .auth()
+    .signOut()
+    .then(function() {
+      sessionStorage.clear();
+      window.location = '../login.html';
+    }, function(error) {
+      console.error(error);
+    });
 }
 
-function getCityonApi(valState) {
-  let cidade = "";
-  let urlCitys = `http://servicodados.ibge.gov.br/api/v1/localidades/estados/${valState}/municipios`
+function calculateAge(birthday){
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const birthYear = birthday.substr(0,4);
 
-  fetch(urlCitys)
-    .then(resp => resp.json())
-    .then(resp => resp.forEach(element => {
-      cidade += `<option value="${element.nome}">${element.nome}</option>`
-      $(".sign-up-city").html(cidade);
-    }
-    )
-    );
+  return (currentYear - parseInt(birthYear));
 }

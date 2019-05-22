@@ -5,6 +5,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .font-size-p {
   margin: 0;
   padding: 0;
@@ -37,7 +43,7 @@ body {
   position: absolute;
 }
 
-.logo img{
+.logo img {
   height: 100%;
   position: inherit;
 }
@@ -50,7 +56,7 @@ body {
   align-items: center;
 }
 
-.choice-login{
+.choice-login {
   text-align: center;
   margin: 20px 10px 0;
   position: relative;
@@ -64,7 +70,7 @@ body {
   color: #C1C1C1;
 }
 
-.rounded-border{
+.rounded-border {
   height: 40px;
   margin-top: 20px;
   padding-left: 15px;
@@ -116,7 +122,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color:  #C1C1C1;
+  color: #C1C1C1;
 }
 
 .btn {
@@ -129,89 +135,3 @@ body {
   border: none;
   border-radius: 10px;
 }
-
-/* 
-.logo {
-  margin: 0;
-  padding: 0;
-  height: 50px;
-}
-
-.logo img{
-  margin: 20px;
-  height: 100%;
-}
-
-.header-nav {
-  width: 100%;
-  height: 9.5%;
-  background-color: #464646;
-  border-top: 1px solid #C64706;
-  margin-top: 30px;
-}
-
-.header-nav-li {
-  display: flex;
-  padding: 10px;
-  justify-content: space-around;
-}
-
-.header-nav-li li {
-  list-style: none;
-  width: 30%;
-  height: 100%;
-  margin: 0;
-  border-bottom: 1px solid #C64706;
-  color: #C1C1C1;
-  flex-direction: center;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.section-header{
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
-}
-
-.section-sign-in, .section-sign-up{
-  margin: 0 auto;
-  display: flex;
-  max-width: 70%;
-  flex-direction: column;
-}
-.form-sign-in, .form-sign-up {
-  align-items: center;
-  justify-content:center;
-}
-
-.btn-login{
-  background-color: #C64706;
-  color: #C1C1C1;
-  border: 1px solid #C64706;
-  width: 140px;
-  height: 35px;
-  padding: 12px 12px;
-  margin: 20px;
-  border-radius: 10px;
-  font-size: 16px;
-}
-
-.rounded-border{
-  background-color: #C1C1C1;
-  border: 1px solid #C1C1C1;
-  padding: 10px 10px;
-  margin: 10px;
-  border-radius: 10px;
-}
-
-.hidden{
-display: none;
-}
-
-.login-options{
-  display:flex;
-  justify-content: space-around;
-  padding: 5px;
-} */

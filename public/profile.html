@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>MOVA-SE</title>
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="css/profile.css">
   <script src="/__/firebase/5.9.1/firebase-app.js"></script>
@@ -16,75 +16,60 @@
 <body>
   <header>
     <nav class="header-nav">
-      <!-- <img class="header-nav-avatar" src="../images/avatar.png" alt="Perfil"> -->
-      <p class="header-nav-avatar"></p>
-      <h1 class="logo">
-        <img src="../images/logo-ms.png" alt="MOVA-SE">
-      </h1>
-      <div class="settings">	
-        <i class="fas fa-bell settings-icons"></i>
-        <i class="fas fa-cog settings-icons"></i>
-        <i class="fas fa-sign-out-alt settings-icons"></i>
-      </div>
-    </nav>			
+      <figure class="header-nav-avatar"><a href="profile.html"><img class="img-avatar" src="../images/avatar.png"/></a></figure>
+      <figure class="logo"><a href="match.html"><img src="../images/logo-ms.png" alt="MOVA-SE"></a></figure>
+      <ul class="settings">
+        <li><a href="#"><i class="fas fa-bell settings-icons"></i></a></li>
+        <li><a href="#"><i class="fas fa-cog settings-icons"></i></a></li>
+        <li><a id="logout" href="#"><i class="fas fa-sign-out-alt settings-icons"></i></a></li>
+      </ul>
+    </nav>
   </header>
-  
+
   <main>
     <a href="match.html"><i class="far fa-arrow-alt-circle-left go-back-icon"></i></a>
     <section class="container">
       <p class="font-size-m profile-title">PERFIL</p>
-      
-      <label class="profile-align">
-        <div class="profile-image picture"></div>                       
-        <div class="edit-profile-image">
-          <p class="font-size-m">EDITAR FOTO</p>
-        </div>                             
-      </label>
-      
-      <section>
-        
-        <label class="name-input">
-          <input type="text" class="rounded-border name">
+      <img class="picture">
+
+      <form>
+        <div>
+          <input type="text" class="rounded-border name-input name">
           <i class="fas fa-pen edit-name-icon"></i>
-        </label>
-        
-        <label class="edit-align">
-          <input id="date" type="date" class="rounded-border bday"/>
+        </div>
+        <div class="edit-align">
+          <input id="date" type="date" class="rounded-border bday" />
           <select class="rounded-border gender">
             <option>Feminino</option>
             <option>Masculino</option>
             <option>Outro</option>
           </select>
-        </label>
-        
-        <label class="edit-align">
+        </div>
+        <div class="edit-align">
           <select class="rounded-border sign-up-state"></select>
           <select class="rounded-border sign-up-city"></select>
-        </label>
-        
+        </div>
+
         <input type="email" class="rounded-border email" disabled>
-        
-        <input type="range" name="range" id="range" class="range">
+
+        <p class="info-range"><span id="slider-value"></span> km de alcance</p>
+        <input type="range" min="1" max="10" value="5" id="range" class="slider range">
         
         <textarea name="about" id="about" class="rounded-border about" placeholder="Conte um pouco sobre você"></textarea>
-        
-      </section>
-      
+      </form>
       <button class="btn font-size-m">ATIVIDADES</button>
-      
+
       <div class="edit-align">
-        <button class="btn font-size-m">SALVAR</button>
-        <button class="btn font-size-m">CANCELAR</button>
+        <button id="save" class="btn font-size-m">SALVAR</button>
+        <button id="cancel" class="btn font-size-m">CANCELAR</button>
       </div>
-      
     </section>
   </main>
-  
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
   <script src="js/Repository.js"></script>
+  <script src="js/ibge.js"></script>
   <script src="js/profile.js"></script>
 </body>
 
