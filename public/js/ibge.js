@@ -22,7 +22,7 @@ function getStateonApi() {
 
 function getCityonApi(valState) {
   let cidade = '';
-  let urlCitys = `http://servicodados.ibge.gov.br/api/v1/localidades/estados/${valState}/municipios`
+  let urlCitys = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${valState}/municipios`
 
   fetch(urlCitys)
     .then(resp => resp.json())
