@@ -2,7 +2,7 @@
 
 ## Plataforma Entretenimento
 
-Acesse o site: [Mova-se](https://). ***editar***
+Acesse o site: [Mova-se](https://mova-se-db.firebaseapp.com/).
   
 ### Índice
 
@@ -58,9 +58,11 @@ Nosso objetivo é criar um aplicativo que atendesse essas necessidades que encon
 
 Nossos usuários seriam pessoas de todas as classes sociais e maiores de idade, que gostariam de arrumar companhia para práticas esportivas, além das inclusas em seu círculo social.
 
-![Pesonas]()
+![Pesonas](https://raw.githubusercontent.com/VivisGaspar/project-open-house/master/public/images/Personas.png)
 
 ### 5. Protótipo
+
+[Mova-se](https://youtu.be/qwzZPLSWfHY)
 
 ### 6. Definição do Produto
 
@@ -68,6 +70,6 @@ O mova-se foi idealizado para unir usuários que gostariam de encontrar parceiro
 
 ### 7. Implementação
 
-Versão 0.0.1 - Cadastro, Login, Busca Parceiros e os Seleciona
+Versão 0.0.1 - Cadastro, Login, Busca Parceiros e os Seleciona.
 
 Versão 0.0.2 - (Futura) Receber notificações e poder avaliar os usuários com um pequeno texto.
