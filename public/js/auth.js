@@ -84,7 +84,7 @@ function createUserInDB(id, name, birthday, gender, state, city, email) {
 }
 
 function signInRedirect(userId) {
-  window.location = '../profile.html';
+  window.location = '../match.html';
 }
 
 function handleError(error) {
