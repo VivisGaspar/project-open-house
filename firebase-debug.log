@@ -123,3 +123,61 @@
 [debug] [2019-05-22T04:44:02.917Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-05-22T21:13:43.422Z] ----------------------------------------------------------------------
+[debug] [2019-05-22T21:13:43.437Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Nina\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-05-22T21:13:43.438Z] CLI Version:   6.9.2
+[debug] [2019-05-22T21:13:43.438Z] Platform:      win32
+[debug] [2019-05-22T21:13:43.438Z] Node Version:  v10.15.0
+[debug] [2019-05-22T21:13:43.621Z] Time:          Wed May 22 2019 18:13:43 GMT-0300 (GMT-03:00)
+[debug] [2019-05-22T21:13:43.622Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-22T21:13:43.722Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-22T21:13:43.724Z] > authorizing via signed-in user
+[debug] [2019-05-22T21:13:43.724Z] [iam] checking project mova-se-db for permissions ["firebase.projects.get"]
+[debug] [2019-05-22T21:13:43.729Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-05-22T21:13:43.729Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-05-22T21:13:44.019Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-22T21:13:44.131Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mova-se-db:testIamPermissions  
+
+[debug] [2019-05-22T21:13:45.344Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-22T21:13:45.346Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mova-se-db  
+ 
+[debug] [2019-05-22T21:13:46.241Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Nina\Documents\Laboratoria\Projetos\project-open-house'...
+[info] 
+[debug] [2019-05-22T21:13:46.267Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/89114266783/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-22T21:13:47.024Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-05-23T00:32:48.408Z] ----------------------------------------------------------------------
+[debug] [2019-05-23T00:32:48.416Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Nina\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-05-23T00:32:48.417Z] CLI Version:   6.9.2
+[debug] [2019-05-23T00:32:48.417Z] Platform:      win32
+[debug] [2019-05-23T00:32:48.417Z] Node Version:  v10.15.0
+[debug] [2019-05-23T00:32:48.422Z] Time:          Wed May 22 2019 21:32:48 GMT-0300 (GMT-03:00)
+[debug] [2019-05-23T00:32:48.422Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-23T00:32:48.510Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-23T00:32:48.513Z] > authorizing via signed-in user
+[debug] [2019-05-23T00:32:48.514Z] [iam] checking project mova-se-db for permissions ["firebase.projects.get"]
+[debug] [2019-05-23T00:32:48.522Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-05-23T00:32:48.523Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-05-23T00:32:49.299Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-23T00:32:49.400Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mova-se-db:testIamPermissions  
+
+[debug] [2019-05-23T00:32:50.458Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-23T00:32:50.461Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mova-se-db  
+ 
+[debug] [2019-05-23T00:32:51.409Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Nina\Documents\Laboratoria\Projetos\project-open-house'...
+[info] 
+[debug] [2019-05-23T00:32:51.415Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/89114266783/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-23T00:32:52.003Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000

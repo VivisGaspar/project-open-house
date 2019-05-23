@@ -17,7 +17,7 @@ $(document).ready(async function() {
     $('#slider-value').text(value);
   });  
   
-  $('.picture').html(user.picture);
+  $('.picture').attr('src',user.picture);
   $('.name').val(user.name);
   $('.bday').val(user.birthday);
   $('.gender').val(user.gender);
