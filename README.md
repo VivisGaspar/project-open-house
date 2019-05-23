@@ -58,7 +58,7 @@ Nosso objetivo é criar um aplicativo que atendesse essas necessidades que encon
 
 Nossos usuários seriam pessoas de todas as classes sociais e maiores de idade, que gostariam de arrumar companhia para práticas esportivas, além das inclusas em seu círculo social.
 
-![Pesonas](https://raw.githubusercontent.com/VivisGaspar/project-open-house/master/public/images/Personas.png)
+![Pesonas](https://github.com/VivisGaspar/project-open-house/blob/master/public/images/Personas.png?raw=true)
 
 ### 5. Protótipo
 
