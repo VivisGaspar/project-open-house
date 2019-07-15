@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 body {
   margin: 22.5% 0 10% 0;
   padding: 0;
@@ -104,11 +104,11 @@ ul {
   margin-left: 15px;
 }
 
-.profile-title {
+.profile-title, .activity-title {
   text-align: center;
   margin: auto;
   position: relative;
-  padding: 0 70px 15px;
+  padding: 0 65px 15px;
   border-bottom: 1px solid #C64706;
   color: #C1C1C1;
 }
@@ -137,11 +137,11 @@ ul {
   color: #707070;
 }
 
-.name, .email, .about {
+.name, .email, .about, .activity-list, .activities {
   width: 100%;
 }
 
-.bday, .gender {
+.bday, .gender, .period {
   width: 47%;
 }
 
@@ -214,8 +214,37 @@ ul {
   color: #C1C1C1;
 }
 
+.form-activities {
+  width: 100%;
+}
+
 .profile-align {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+.activity-list>option, .weekday>option, .period>option, .my-activities {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* .rounded-border-activity {
+  height: 40px;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #C1C1C1;
+  color: #707070;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;
+} */
+
+.span-padding{
+ padding: 10px 10px; 
+}
+.span-border {
+  padding: 10px 10px;
+  border-left: 1px solid #C64706;
+  border-right: 1px solid #C64706; 
 }
