@@ -18,6 +18,8 @@ $(document).ready(function() {
     $(".sign-up").addClass('active');
     $(".sign-in").removeClass('active');
   });
+  
+  $('#logout').on('click', logout);
 });
 
 function signUpClick(event) {
