@@ -9,15 +9,18 @@ $(document).ready(async function() {
 
   const db = new Repository(database);
   const user = await db.getUserById(USER_ID);
+  $('#activities').on('click', function() {
+    window.location = 'activities.html';
+  });
 
   $('#slider-value').html($('#range').val());
 
   $('#range').on('input', function() {
     const value = $(this).val();
     $('#slider-value').text(value);
-  });  
-  
-  $('.picture').attr('src',user.picture);
+  });
+
+  $('.picture').attr('src', user.picture);
   $('.name').val(user.name);
   $('.bday').val(user.birthday);
   $('.gender').val(user.gender);
@@ -29,7 +32,7 @@ $(document).ready(async function() {
   $('#range').val(user.range);
   $('.info-range #slider-value').text(user.range);
   $('#about').val(user.about);
-  $('#logout').on('click', logout); 
+  $('#logout').on('click', logout);
 
   $('#save').on('click', function() {
     const newUser = {
