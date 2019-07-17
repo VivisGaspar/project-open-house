@@ -1,5 +1,6 @@
 # Ignore Dependencies
 firebase-debug.log
 .firebase
+node_modules
 
 public/images/prototipo
