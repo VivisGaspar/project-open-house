@@ -5,6 +5,7 @@ if (!USER_ID) window.location.href = 'login.html';
 
 $(document).ready(async function() {
   $('#save').on('click', saveActivity);
+  $('#cancel').on('click', cancelAdd);
 
   const db = new Repository(database);
   const activities = await db.getActivitiesByUserId(USER_ID);
@@ -46,4 +47,8 @@ function showActivities(activity){
 
 function abbr(str){
   return str.length > 10 ? str.substring(0, 10) : str; 
+}
+
+function cancelAdd() {
+  window.location.reload();
 }
