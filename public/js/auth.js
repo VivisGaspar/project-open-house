@@ -23,14 +23,12 @@ $(document).ready(function() {
     $(".sign-up").addClass('active');
     $(".sign-in").removeClass('active');
   });
-  
-  $('#logout').on('click', logout);
 });
 
 function signUpClick(event) {
   event.preventDefault();
   
-  let name = $('.sign-up-name').val();
+  let name = $('.sign-up-name').val().toUpperCase();
   let birthday = $('.sign-up-birthday').val();
   let gender = $('.sign-up-gender').val();
   let state = $('.sign-up-state').val();
@@ -76,6 +74,7 @@ function loginUserAuth(email, password) {
 }
 
 function createUserInDB(id, name, birthday, gender, state, city, email) {
+  sessionStorage.setItem('USER_ID', id);
   database.ref('users/' + id).set({
     name: name,
     birthday: birthday,
@@ -137,24 +136,6 @@ function resetPassword() {
   }).catch(function(error) {
     handleError(error);
   });
-}
-
-function logout(event) {
-  event.preventDefault();
-  firebase
-  .auth()
-  .signOut()
-  .then(function() {
-    sessionStorage.clear();
-    window.location = '../login.html';
-  }, function(error) {
-    console.error(error);
-  });
-}
-
-function handleError(error) {
-  alert(error.message);
-  console.log(error.code, error.message);
 }
 
 function calculateAge(birthday){
