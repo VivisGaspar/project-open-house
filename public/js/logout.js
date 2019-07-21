@@ -17,3 +17,4 @@ function handleError(error) {
     alert(error.message);
     console.log(error.code, error.message);
 }
+

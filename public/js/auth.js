@@ -5,10 +5,11 @@ $(document).ready(function() {
   
   $('.sign-up-button').on('click', signUpClick);
   $('.sign-in-button').on('click', signInClick);
+  $('.forgot-password').on('click', resetPassword);
   $('.form-check-input').on('click', authPersistence);
   $('.sign-in-google').on('click', authGoogle);
   $('.sign-in-facebook').on('click', authFacebook);
-
+  
   
   $('.sign-in').on('click', function() {
     $('.section-sign-up').css('display', 'none');
@@ -22,13 +23,12 @@ $(document).ready(function() {
     $(".sign-up").addClass('active');
     $(".sign-in").removeClass('active');
   });
-  
 });
 
 function signUpClick(event) {
   event.preventDefault();
   
-  let name = $('.sign-up-name').val();
+  let name = $('.sign-up-name').val().toUpperCase();
   let birthday = $('.sign-up-birthday').val();
   let gender = $('.sign-up-gender').val();
   let state = $('.sign-up-state').val();
@@ -74,6 +74,7 @@ function loginUserAuth(email, password) {
 }
 
 function createUserInDB(id, name, birthday, gender, state, city, email) {
+  sessionStorage.setItem('USER_ID', id);
   database.ref('users/' + id).set({
     name: name,
     birthday: birthday,
@@ -129,10 +130,20 @@ function authPersistence() {
   });
 }
 
+function resetPassword() {
+  let auth = firebase.auth();
+  let emailAddress = $('.sign-in-email').val();
+  
+  auth.sendPasswordResetEmail(emailAddress).then(function() {
+    alert('E-mail para redefinição de senha enviado com sucesso');
+  }).catch(function(error) {
+    handleError(error);
+  });
+}
+
 function handleError(error) {
   alert(error.message);
   console.log(error.code, error.message);
-}
 
 function calculateAge(birthday){
   const currentDate = new Date();
