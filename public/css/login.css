@@ -125,6 +125,29 @@ ul {
   color: #C1C1C1;
 }
 
+.login-social {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.login-social img {
+  width: 25%;
+}
+
+.login-facebook {
+  background-color: #C1C1C1;
+  top: 6px;
+  left: 60px;
+  width: 15%;
+  height: 90%;
+  position: absolute;
+  z-index: -1;
+}
+
 .btn {
   width: 140px;
   height: 35px;

@@ -22,11 +22,11 @@
       <li class="sign-in font-size-m choice-login active">LOGIN</li>
       <li class="sign-up font-size-m choice-login">CADASTRO</li>
     </ul>
-
+    
     <form class="section-sign-in">
       <input type="text" class="sign-in-email rounded-border" placeholder="E-mail" />
       <input type="password" class="sign-in-password rounded-border" placeholder="Senha" />
-
+      
       <section class="login-options">
         <p class="font-size-p"><u>Esqueci a senha</u></p>
         <div>
@@ -35,8 +35,13 @@
         </div>
       </section>
       <button type="button" class="sign-in-button btn">ENTRAR</button>
+      <section class="login-social">
+        <img class="sign-in-facebook" src="../images/facebook.png" alt="Login com Facebook">
+        <span class="login-facebook"></span>
+        <img class="sign-in-google" src="../images/google.png" alt="Login com Google">
+      </section>
     </form>
-
+    
     <form class="section-sign-up hidden">
       <input type="text" class="sign-up-name rounded-border" placeholder="Nome completo" />
       <section class="edit-align">
@@ -47,20 +52,20 @@
           <option>Outro</option>
         </select>
       </section>
-
+      
       <div class="edit-align">
         <select class="sign-up-state rounded-border"></select>
         <select class="sign-up-city rounded-border"></select>
       </div>
-
+      
       <input type="email" class="sign-up-email rounded-border" placeholder="E-mail" />
       <input type="password" class="sign-up-password rounded-border" placeholder="Senha" />
       <button type="button" class="sign-up-button  btn">CADASTRAR</button>
     </form>
   </main>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
   <script src="js/firebase-config.js"></script>
   <script src="js/ibge.js"></script>
   <script src="js/auth.js"></script>
