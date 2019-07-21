@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
 body {
   margin: 22.5% 0 10% 0;
   padding: 0;
@@ -104,7 +105,7 @@ ul {
   margin-left: 15px;
 }
 
-.profile-title, .activity-title {
+.profile-title {
   text-align: center;
   margin: auto;
   position: relative;
@@ -137,11 +138,11 @@ ul {
   color: #707070;
 }
 
-.name, .email, .about, .activity-list, .activities {
+.name, .email, .about {
   width: 100%;
 }
 
-.bday, .gender, .period {
+.bday, .gender {
   width: 47%;
 }
 
@@ -224,27 +225,71 @@ ul {
   align-items: flex-end;
 }
 
-.activity-list>option, .weekday>option, .period>option, .my-activities {
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-/* .rounded-border-activity {
-  height: 40px;
-  margin-top: 20px;
-  padding: 10px 15px;
-  background-color: #C1C1C1;
-  color: #707070;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 10px;
-} */
-
 .span-padding{
- padding: 10px 10px; 
+  padding: 10px 10px; 
 }
 .span-border {
   padding: 10px 10px;
   border-left: 1px solid #C64706;
   border-right: 1px solid #C64706; 
+}
+
+.activity-title {
+  text-align: center;
+  margin: auto;
+  position: relative;
+  padding: 0 30px 15px;
+  border-bottom: 1px solid #C64706;
+  color: #C1C1C1;
+}
+
+.activity-type-list {
+  width: 100%;
+}
+
+.weekday, .period {
+  width: 45%;
+}
+
+.activity-list {
+  width: 100%;
+  display: flex;
+}
+
+.activities, .my-activities {
+  width: 100%;
+}
+
+.align-activities {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 0 0;
+  /* width: 32%; */
+  height: 40px;
+  background-color: #C1C1C1;
+  color: #707070;
+  font-size: 12px;
+}
+
+.activity-type {
+  border-radius: 10px 0 0 10px;
+  width: 30%;
+}
+
+.activity-weekday {
+  border-right: 1px solid #C64706;
+  border-left: 1px solid #C64706;
+  width: 30%;
+}
+
+.activity-period {
+  width: 30%;  
+}
+
+.edit-icon {
+  border-radius: 0 10px 10px 0;
+  width: 10%;
+  border-left: 1px solid #C64706;
+
 }

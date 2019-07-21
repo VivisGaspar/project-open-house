@@ -14,7 +14,7 @@ $(document).ready(async function() {
 });
 
 async function saveActivity() {
-  const activity = $('.activity-list').val();
+  const activity = $('.activity-type-list').val();
   const weekday = $('.weekday').val();
   const period = $('.period').val();
   const db = new Repository(database);
@@ -34,11 +34,11 @@ async function saveActivity() {
 function showActivities(activity){
   const template = `
   <li>
-    <div class="edit-align rounded-border">
-      <span class="font-size-m span-padding">${abbr(activity.activity)}</span>
-      <span class="font-size-m span-border">${activity.weekday.substring(0,3)}</span>
-      <span class="font-size-m span-padding">${activity.period}</span>
-      <i class="fas fa-pen span-padding font-size-m"></i>
+    <div class="activity-list">
+      <span class="font-size-m align-activities activity-type">${abbr(activity.activity)}</span>
+      <span class="font-size-m align-activities activity-weekday">${activity.weekday.substring(0,3)}</span>
+      <span class="font-size-m align-activities activity-period">${activity.period}</span>
+      <i class="fas fa-pen font-size-m align-activities edit-icon"></i>
     </div>
   </li>`
 
