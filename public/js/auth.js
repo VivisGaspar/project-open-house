@@ -23,7 +23,6 @@ $(document).ready(function() {
     $(".sign-in").removeClass('active');
   });
   
-  $('#logout').on('click', logout);
 });
 
 function signUpClick(event) {
@@ -43,8 +42,8 @@ function signUpClick(event) {
 function signInClick(event) {
   event.preventDefault();
   
-  var email = $('.sign-in-email').val();
-  var password = $('.sign-in-password').val();
+  let email = $('.sign-in-email').val();
+  let password = $('.sign-in-password').val();
   
   loginUserAuth(email, password);
 }
@@ -119,24 +118,14 @@ function signIn(provider) {
 
 function authPersistence() {
   firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+  console.log('persistence')
   .then(function() {
+    let email = $('.sign-in-email').val();
+    let password = $('.sign-in-password').val();
     return firebase.auth().signInWithEmailAndPassword(email, password);
   })
   .catch(function(error){
     handleError(error);
-  });
-}
-
-function logout(event) {
-  event.preventDefault();
-  firebase
-  .auth()
-  .signOut()
-  .then(function() {
-    sessionStorage.clear();
-    window.location = '../login.html';
-  }, function(error) {
-    console.error(error);
   });
 }
 
