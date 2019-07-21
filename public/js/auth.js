@@ -5,10 +5,11 @@ $(document).ready(function() {
   
   $('.sign-up-button').on('click', signUpClick);
   $('.sign-in-button').on('click', signInClick);
+  $('.forgot-password').on('click', resetPassword);
   $('.form-check-input').on('click', authPersistence);
   $('.sign-in-google').on('click', authGoogle);
   $('.sign-in-facebook').on('click', authFacebook);
-
+  
   
   $('.sign-in').on('click', function() {
     $('.section-sign-up').css('display', 'none');
@@ -123,6 +124,17 @@ function authPersistence() {
     return firebase.auth().signInWithEmailAndPassword(email, password);
   })
   .catch(function(error){
+    handleError(error);
+  });
+}
+
+function resetPassword() {
+  let auth = firebase.auth();
+  let emailAddress = $('.sign-in-email').val();
+  
+  auth.sendPasswordResetEmail(emailAddress).then(function() {
+    alert('E-mail para redefinição de senha enviado com sucesso');
+  }).catch(function(error) {
     handleError(error);
   });
 }
