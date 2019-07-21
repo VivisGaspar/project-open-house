@@ -125,6 +125,19 @@ ul {
   color: #C1C1C1;
 }
 
+.login-social {
+  width: 60%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.login-social img {
+  width: 25%;
+}
+
 .btn {
   width: 140px;
   height: 35px;
