@@ -5,6 +5,7 @@ $(document).ready(function() {
   
   $('.sign-up-button').on('click', signUpClick);
   $('.sign-in-button').on('click', signInClick);
+  $('.form-check-input').on('click', authPersistence);
   $('.sign-in-google').on('click', authGoogle);
   $('.sign-in-facebook').on('click', authFacebook);
 
@@ -113,6 +114,16 @@ function signIn(provider) {
     signInRedirect(userId);
   }).catch(function (error) {
     handleError(error);  
+  });
+}
+
+function authPersistence() {
+  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+  .then(function() {
+    return firebase.auth().signInWithEmailAndPassword(email, password);
+  })
+  .catch(function(error){
+    handleError(error);
   });
 }
 
