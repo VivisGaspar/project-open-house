@@ -274,22 +274,25 @@ ul {
 
 .activity-type {
   border-radius: 10px 0 0 10px;
-  width: 30%;
+  width: 25%;
 }
 
 .activity-weekday {
   border-right: 1px solid #C64706;
   border-left: 1px solid #C64706;
-  width: 30%;
+  width: 25%;
 }
 
 .activity-period {
-  width: 30%;  
+  width: 25%;  
 }
 
 .edit-icon {
-  border-radius: 0 10px 10px 0;
-  width: 10%;
   border-left: 1px solid #C64706;
+  width: 12.5%;
+}
 
+.remove-icon {
+  border-radius: 0 10px 10px 0;
+  width: 12.5%;
 }

@@ -39,6 +39,7 @@ function showActivities(activity){
       <span class="font-size-m align-activities activity-weekday">${activity.weekday.substring(0,3)}</span>
       <span class="font-size-m align-activities activity-period">${activity.period}</span>
       <i class="fas fa-pen font-size-m align-activities edit-icon"></i>
+      <i class="fas fa-trash-alt font-size-m align-activities remove-icon"></i>
     </div>
   </li>`
 
