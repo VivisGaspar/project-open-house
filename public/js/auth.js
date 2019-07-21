@@ -74,6 +74,7 @@ function loginUserAuth(email, password) {
 }
 
 function createUserInDB(id, name, birthday, gender, state, city, email) {
+  sessionStorage.setItem('USER_ID', id);
   database.ref('users/' + id).set({
     name: name,
     birthday: birthday,

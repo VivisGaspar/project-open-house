@@ -1,5 +1,3 @@
-database = firebase.database();
-
 $('#logout').on('click', logout);
 
 function logout(event) {
