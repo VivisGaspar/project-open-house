@@ -6,6 +6,8 @@ $(document).ready(function() {
   $('.sign-up-button').on('click', signUpClick);
   $('.sign-in-button').on('click', signInClick);
   $('.sign-in-google').on('click', authGoogle);
+  $('.sign-in-facebook').on('click', authFacebook);
+
   
   $('.sign-in').on('click', function() {
     $('.section-sign-up').css('display', 'none');
@@ -90,17 +92,9 @@ function signInRedirect(userId) {
   window.location = '../match.html';
 }
 
-function logout(event) {
-  event.preventDefault();
-  firebase
-  .auth()
-  .signOut()
-  .then(function() {
-    sessionStorage.clear();
-    window.location = '../login.html';
-  }, function(error) {
-    console.error(error);
-  });
+function authFacebook(){
+  let provider = new firebase.auth.FacebookAuthProvider();
+  signIn(provider);
 }
 
 function authGoogle(){
@@ -119,6 +113,19 @@ function signIn(provider) {
     signInRedirect(userId);
   }).catch(function (error) {
     handleError(error);  
+  });
+}
+
+function logout(event) {
+  event.preventDefault();
+  firebase
+  .auth()
+  .signOut()
+  .then(function() {
+    sessionStorage.clear();
+    window.location = '../login.html';
+  }, function(error) {
+    console.error(error);
   });
 }
 
