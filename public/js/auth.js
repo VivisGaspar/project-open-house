@@ -6,7 +6,7 @@ $(document).ready(function() {
   $('.sign-up-button').on('click', signUpClick);
   $('.sign-in-button').on('click', signInClick);
   $('.forgot-password').on('click', resetPassword);
-  $('.form-check-input').on('click', authPersistence);
+  // $('.form-check-input').on('click', authPersistence);
   $('.sign-in-google').on('click', authGoogle);
   $('.sign-in-facebook').on('click', authFacebook);
   
@@ -117,18 +117,18 @@ function signIn(provider) {
   });
 }
 
-function authPersistence() {
-  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-  console.log('persistence')
-  .then(function() {
-    let email = $('.sign-in-email').val();
-    let password = $('.sign-in-password').val();
-    return firebase.auth().signInWithEmailAndPassword(email, password);
-  })
-  .catch(function(error){
-    handleError(error);
-  });
-}
+// function authPersistence() {
+//   firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+//   .then(function() {
+//     console.log('persistence')
+//     let email = $('.sign-in-email').val();
+//     let password = $('.sign-in-password').val();
+//     return firebase.auth().signInWithEmailAndPassword(email, password);
+//   })
+//   .catch(function(error){
+//     handleError(error);
+//   });
+// }
 
 function resetPassword() {
   let auth = firebase.auth();
@@ -144,6 +144,7 @@ function resetPassword() {
 function handleError(error) {
   alert(error.message);
   console.log(error.code, error.message);
+}
 
 function calculateAge(birthday){
   const currentDate = new Date();
