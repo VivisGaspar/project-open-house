@@ -24,7 +24,7 @@ Acesse o site: [Mova-se](https://mova-se-db.firebaseapp.com/).
 
 Projeto desenvolvido para o bootcamp da Laboratória SP. Consiste em desenvolver um MVP(Produto Mínimo Viável) e demostrar o consumo de APIs(Interface de Programação de Aplicações).
 
-### 2. Objetivos
+### 2. Objetivo
 
 #### Objetivos de aprendizagem
 
