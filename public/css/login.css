@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -46,6 +48,10 @@ ul {
 .logo img {
   height: 100%;
   position: inherit;
+}
+
+.header-text {
+  display: none;
 }
 
 .container {
@@ -125,6 +131,19 @@ ul {
   color: #C1C1C1;
 }
 
+.login-social {
+  width: 60%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.login-social img {
+  width: 25%;
+}
+
 .btn {
   width: 140px;
   height: 35px;
@@ -134,4 +153,182 @@ ul {
   text-align: center;
   border: none;
   border-radius: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: #464646;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .font-size-p {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+  }
+  
+  .font-size-m {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  
+  .align-header {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  
+  .background-image {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url("../images/fundo-pb-mova-se.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #C64706;
+    border-right: 1px solid #C64706;
+    height: 55vh;
+    position: relative;
+  }
+  
+  .logo {
+    top: 65%;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 104px;
+    position: absolute;
+  }
+  
+  .logo img {
+    height: 100%;
+    position: inherit;
+  }
+  
+  .header-text {
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    border-right: 1px solid #C64706;
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    color: #C1C1C1;
+    font-weight: 400;
+  }
+
+  .container {
+    width: 35%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .choice-login {
+    text-align: center;
+    margin: 20px 10px 0;
+    position: relative;
+    padding: 0 30px 15px;
+    border-bottom: 1px solid #707070;
+    color: #707070;
+  }
+  
+  .choice-login.active {
+    border-bottom: 1px solid #C64706;
+    color: #C1C1C1;
+  }
+  
+  .rounded-border {
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 15px;
+    background-color: #C1C1C1;
+    color: #707070;
+    font-size: 12px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .section-sign-in, .section-sign-up {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .sign-in-email, .sign-in-password, .sign-up-name, .sign-up-email, .sign-up-password {
+    width: 75%;
+  }
+  
+  .sign-up-birthday, .sign-up-gender {
+    width: 47%;
+  }
+  
+  .sign-up-state {
+    width: 37%;
+  }
+  
+  .sign-up-city {
+    width: 57%;
+  }
+  
+  .edit-align {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .login-options {
+    width: 75%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #C1C1C1;
+  }
+  
+  .login-social {
+    width: 60%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+  }
+  
+  .login-social img {
+    width: 25%;
+  }
+  
+  .btn {
+    width: 140px;
+    height: 35px;
+    margin: 20px 5px 0;
+    background-color: #C64706;
+    color: #C1C1C1;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+  }
 }
